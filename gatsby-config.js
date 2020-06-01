@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Debt Collective`,
     description: `Offering debtors a shared platform for organization, advocacy, and direct action.`,
-    author: `@gatsbyjs`,
+    author: `@mberguer`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `gatsby-debt-repos`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
@@ -47,6 +47,17 @@ module.exports = {
           `Sacramento`
         ],
         display: 'swap'
+      }
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        url: "https://api.github.com/graphql",
+        headers: {
+          Authorization: `Bearer ${process.env.AUTH_TOKEN}`,
+        },
+        typeName: "GitHub",
+        fieldName: "githubQuery"
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

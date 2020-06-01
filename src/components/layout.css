@@ -31,3 +31,25 @@ body {
 .path-icon-color{
   fill: #ff4630;
 }
+
+.repos-list{
+  padding: 0;
+}
+
+.users-list{
+  padding-left: 12px;
+}
+
+.repos-list a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.repo-language-color {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}

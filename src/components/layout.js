@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 
         <main>{children}</main>
 
-        <footer className="f6">
+        <footer className="f6 py-4">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
